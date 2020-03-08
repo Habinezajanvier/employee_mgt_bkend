@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commpany X</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Company X</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div class="upper">
+                <h2>Employee management</h2>
+                This application is designed to manage our employees, 
+                to access all the information about employees, requiers to be a manager
+            </div>
+            <div class="cnt-down">
+                If you are a new manager your have to register first so click on register button 
+                If you are not new login to continue
+            </div>
+            <button class="register">Register</button>
+            <button class="loginbtn">Login</button>
+        </div>
+        <div class="aside">
+            <div  class="signUp">
+                <h2>Sign Up</h2>
+                <div class="para">
+                    <p>For new manager, fill out this information below to access our management system  
+                        over employeers
+                    </p>
+                </div>
+                <form class="signUp_form" autocomplete="off">
+                    <p class="name">Employee Name</p>
+                    <input type="text" id="name" required>
+                    <p class="num">Id Number</p>
+                    <input type="text" id="number" required>
+                    <p class="email">Email</p>
+                    <input type="email" name="email" id="email" required>
+                    <p class="password">Password</p>
+                    <input type="password" name="password" required id="password">
+                    <p class="position">Position</p>
+                    <input type="text" name="position" requird id="position">
+                    <p class="birthdate">Date of birth</p>
+                    <input type="text" name="birthdate" required id="birthdate">
+    
+                    <button type="submit">Sign Up</button>
+                </form>
+                
+            </div>
+            <div  class="login">
+                <h2>Login</h2>
+                <div class="para">
+                    <p>As manager login to access our management system over 
+                        employeers
+                    </p>
+                </div>
+                <form class="login_form" autocomplete="off">
+                    <p class="l_name">Employee Name</p>
+                    <input type="text" id="l_name" required>
+                    
+                    <p class="l_password">Password</p>
+                    <input type="password" name="password" required id="l_password">
+                    
+    
+                    <button type="submit">Login</button>
+                </form>
+                
+            </div>
+            <div class="error"></div>
+        </div>
+
+    </div>
+    
+    <footer>
+        <div class="location">
+            <h3>Location</h3>
+        </div>
+        <div class="contact">
+            <h3>Contact</h3>
+        </div>
+        <div class="about">
+            <h3>About us</h3>
+        </div>
+    </footer>
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/login.js"></script>
+    <script src="../scripts/signup.js"></script>
+</body>
+</html>
