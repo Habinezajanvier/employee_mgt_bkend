@@ -1,12 +1,14 @@
-
+body{
+    background-color: rgb(54, 71, 71);
+}
 div, form{
     border-radius: 15px;
 }
 .container{
     position: relative;
-    width: 1000px;
+    width: 80%;
     height: 600px;
-    background: #FFFFFF;
+    background: #FFFFFF; 
 }
 .upper{
     position: absolute;
@@ -28,7 +30,7 @@ div, form{
 }
 .aside{
     position: absolute;
-    width: 600px;
+    width: 600px;    
     height: 374px;
     left: 365px;
     top: 200px;
