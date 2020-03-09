@@ -1,0 +1,168 @@
+body{
+    
+}
+div, form{
+    border-radius: 15px;
+}
+.container{
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    background: #FFFFFF;
+}
+.upper{
+    position: absolute;
+    width: 920px;
+    height: 138px;
+    left: 45px;
+    top: 43px;
+    
+    background: #F8F2F2;
+}
+.adding{
+    position: absolute;
+    width: 300px;
+    height: 369px;
+    left: 45px;
+    top: 200px;
+
+    background: #F6F1F1;
+}
+.aside{
+    position: absolute;
+    width: 600px;
+    height: 374px;
+    left: 365px;
+    top: 200px;
+    
+    background: #F5F0F0;
+}
+.para{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+}
+.upper .para{
+    position: absolute;
+    width: 555px;
+    height: 32px;
+    left: 197px;
+    top: 56px;
+}
+.aside .para{
+    position: absolute;
+    width: 493px;
+    height: 32px;
+    left: 40px;
+    top: 22px;
+}
+h2{
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    width: 100%;
+}
+.upper h2{
+    position: absolute;
+    height: 19px;
+    left: 390px;
+    top: 13px;
+}
+.adding h2{
+    position: absolute;
+    height: 19px;
+    left: 72px;
+    top: 4px;
+    
+}
+.adding input{
+    position: absolute;
+    width: 243px;
+    height: 20px;
+    left: 20px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding-left: 10px;
+}
+#name{
+    top: 60px;
+}
+#number{
+    top: 100px;
+}
+#email{
+    top: 140px;
+}
+#position{
+    top: 180px
+}
+#phoneNumber{
+    top: 220px
+}
+#birthDate{
+    top: 260px
+}
+.adding button{
+    position: absolute;
+    width: 90px;
+    height: 34px;
+    left: 95px;
+    top: 319px;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    background: #242C1A;
+}
+#search{
+    position: absolute;
+    width: 493px;
+    height: 130px;
+    left: 40px;
+    top: 118px;
+    background: #FFFFFF;
+}
+#employeeName, #s_email, #s_phoneNumber, #s_position{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 6px;
+    background: #C4C4C4;
+}
+#employeeName{
+    left: 9px;
+}
+#s_email{
+    left: 119px;
+}
+#s_phoneNumber{
+    left: 229px
+}
+#s_position{
+    left: 339px;
+}
+#s_name{
+    position: absolute;
+    width: 355px;
+    height: 37px;
+    left: 9px;
+    top: 60px;
+    border-radius: 15px;
+    padding-left: 12px;
+    background: #C4C4C4;
+}
+#search button{
+    position: absolute;
+    width: 93px;
+    height: 38px;
+    left: 388px;
+    top: 59px;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    background: #242C1A;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/employee.css">
+</head>
+<body>
+    <header></header>
+    <div class="container">
+        <div class="upper">
+            <h2>Employee Management</h2>
+            <div class="para">
+                <p>
+                    As manager you should add new employee, to access data for employee use search box, and if you want to edit anything about her/him
+                </p>
+            </div>
+        </div>
+        <form class="adding" autocomplete="off">
+            <h2>Add Employee</h2>
+            <input type="text" name="name" id="name" placeholder="Employee Name" required>
+            <input type="text" name="name" id="number" placeholder="id Number" required>
+            <input type="text" name="name" id="email" placeholder="Email" required>
+            <input type="text" name="name" id="position" placeholder="Postion" required>
+            <input type="text" name="name" id="phoneNumber" placeholder="Phone Number" required>
+            <input type="text" name="name" id="birthDate" placeholder="Date of birth" required>
+            <button type="submit">Save</button>
+        </form>
+        <div class="aside">
+            <div class="para">
+                <p>
+                    Search for employee you want, you can use either position of the employee, employee name, email or phone number of employee
+                </p>
+                <form id='search' autocomplete="off">
+                    <input type="radio" name="field" id="employeeName" value="name">
+                    <input type="radio" name="field" id="s_email" value="Email">
+                    <input type="radio" name="field" id="s_phoneNumber" value="Number">
+                    <input type="radio" name="field" id="s_position" value="Position">
+                    <input type="text" id="s_name">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>
