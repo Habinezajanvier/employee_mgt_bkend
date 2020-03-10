@@ -1,0 +1,241 @@
+body {
+  background-color: rgb(174, 153, 12);
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  color: rgb(174, 153, 12);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(55, 55, 55);
+  border-bottom: thistle 2px solid;
+  font-family: Roboto;
+  z-index: 2;
+}
+.menu {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+#login,
+#signup {
+  line-height: 100px;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+  color: rgb(3, 252, 15);
+  letter-spacing: 2px;
+}
+header a:visited {
+  text-decoration: none;
+  color: rgb(3, 252, 15);
+}
+.container {
+  padding-top: 110px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+h2 {
+  font-family: monospace;
+  font-size: 24px;
+  color: rgb(3, 252, 15);
+  letter-spacing: 0;
+}
+.content,
+.aside {
+  width: 49.5%;
+  text-align: center;
+  min-height: 450px;
+  background-color: rgb(55, 55, 55);
+  border-radius: 12px;
+  box-shadow: grey -10px 2px;
+}
+.inner {
+  margin: 2%;
+  border: solid 2px rgb(172, 128, 17);
+  border-radius: 12px;
+  padding-top: unset;
+}
+.inner p {
+  padding: 10px;
+  font-size: 16px;
+  font-family: monospace;
+  color: rgb(174, 153, 12);
+}
+.inner span {
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.cnt-down {
+  color: rgb(3, 252, 15);
+  font-family: monospace;
+  text-shadow: black 2px 2px;
+  padding: 10px;
+  font-size: 16px;
+}
+.btns {
+  justify-self: end;
+  display: flex;
+  justify-content: space-around;
+}
+.register,
+.loginbtn {
+  font-family: sans-serif;
+  color: rgb(3, 252, 15);
+  letter-spacing: 2px;
+  border-radius: 10px;
+  padding: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.register:hover,
+.loginbtn:hover {
+  animation: anim 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes anim {
+  0% {
+    color: rgb(3, 252, 15);
+    border-radius: 10px;
+  }
+  100% {
+    color: rgb(1, 65, 5);
+    border-radius: 12px;
+    font-size: 16px;
+  }
+}
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.centered {
+  height: 72%;
+  width: 98%;
+  border: solid 2px rgb(172, 128, 17);
+  border-radius: 12px;
+  background-image: url('../image/background.png');
+  background-size: cover;
+  position: relative;
+  margin-top: 50px;
+}
+.innerlogin {
+  position: absolute;
+  right: 5%;
+  top: 50px;
+  width: 40%;
+  background-color: rgba(55, 55, 55, 0.7);
+  border-radius: 10px;
+  box-shadow: rgba(142, 151, 151, 0.6) 10px 10px;
+  box-shadow: rgba(72, 87, 87, 0.8) 6px 6px;
+  font-family: sans-serif;
+  color: rgb(3, 252, 15);
+  font-size: 14px;
+  letter-spacing: 2px;
+  height: 230px;
+  display: none;
+}
+.innerlogin button {
+  color: rgb(3, 252, 15);
+  height: 30px;
+}
+.innerlogin button:hover {
+  background-color: gray;
+  box-shadow: rgba(240, 255, 240, 0.5) 3px 3px;
+}
+.innerlogin input,
+.innerlogin button {
+  width: 90%;
+  height: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+.error {
+  align-self: end;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-family: monospace;
+  color: rgb(174, 44, 12);
+  justify-content: space-around;
+  display: flex;
+  line-height: 50px;
+}
+footer {
+  color: rgb(3, 252, 15);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(55, 55, 55);
+  margin-top: 6px;
+  font-family: sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* css for loading object */
+.loader {
+  border: 5px solid #9c9c7b;
+  border-radius: 50%;
+  border-top: 5px solid rgb(85, 77, 27);
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* End of the loading object */
+
+@media (max-width: 760px) {
+  .menu {
+    display: none;
+  }
+  h1 {
+    justify-self: end;
+  }
+  .aside {
+    display: none;
+  }
+  .content {
+    width: 100%;
+  }
+}
+@keyframes popup {
+  0% {
+    width: 0px;
+    overflow: hidden;
+  }
+  100% {
+    width: 40%;
+  }
+}

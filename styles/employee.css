@@ -1,215 +1,113 @@
-body{
-    background-color: rgb(54, 71, 71);
-}
-div, form{
-    border-radius: 15px;
-}
-.container{
-    position: relative;
-    width: 1020px;
-    height: 600px;
-    background: #FFFFFF; 
+header{
+    text-align: center;
 }
 .upper{
-    position: absolute;
-    width: 920px;
-    height: 138px;
-    left: 45px;
-    top: 43px;
-    
-    background: #F8F2F2;
-}
-.adding{
-    position: absolute;
-    width: 300px;
-    height: 390px;
-    left: 45px;
-    top: 200px;
-
-    background: #F6F1F1;
-}
-.aside{
-    position: absolute;
-    width: 600px;    
-    height: 390px;
-    left: 365px;
-    top: 200px;
-    
-    background: #F5F0F0;
-}
-.para{
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
     text-align: center;
-}
-.upper .para{
-    position: absolute;
-    width: 555px;
-    height: 32px;
-    left: 197px;
-    top: 56px;
-}
-.aside .para{
-    position: absolute;
-    width: 493px;
-    height: 32px;
-    left: 40px;
-    top: 22px;
+    padding: 10px 50px;
+    background-color: rgb(240, 192, 138);
+    border-top: 2px double #021f00;
 }
 h2{
-    font-family: sans-serif;
-    font-style: normal;
-    font-weight: bold;
+    font-family: cursive;
+    text-decoration-line: underline;
+}
+p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
-    line-height: 19px;
-    width: 100%;
 }
-.upper h2{
-    position: absolute;
-    height: 19px;
-    left: 390px;
-    top: 13px;
-}
-.adding h2{
-    position: absolute;
-    height: 19px;
-    left: 72px;
-    top: 4px;
-    
+.adding{
+    background-color: rgb(126, 122, 107);
+    width: 350px;
+    padding: 10px;
+    margin-left: 6px;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 12px;
 }
 .adding input{
-    position: absolute;
-    width: 243px;
+    width: 90%;
+    border-radius: 12px;
+    padding-left: 10px;
+    margin-top: 15px;
     height: 20px;
-    left: 20px;
-    background: #FFFFFF;
+}
+#month, #year{
     border-radius: 12px;
-    padding-left: 10px;
-}
-#name{
-    top: 50px;
-}
-#number{
-    top: 90px;
-}
-#email{
-    top: 130px;
-}
-#position{
-    top: 170px
-}
-#phoneNumber{
-    top: 210px
-}
-#dates{
-    top: 255px;
-    width: 100px;
-}
-#month{
-    position: absolute;
-    top: 255px;
-    left: 150px;
-    width: 120px;
-    border-radius: 12px;
-    padding-left: 10px;
-    height: 25px;
-    border: 2px solid gray;
+    width: 40%;
+    height: 20px;
 }
 #year{
-    top: 285px;
+    margin-left: 25px;
 }
-.adding button{
-    position: absolute;
-    width: 90px;
-    height: 34px;
-    left: 95px;
-    top: 330px;
-    color: white;
+button{
+    margin-top: 30px;
+    height: 40px;
+    line-height: 35px;
+    width: 60px;
+    background-color: rgb(12, 31, 12);
+    border-radius: 10px;
     font-weight: bold;
+    font-family: Helvetica;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+.adding button:hover{
+    background-color: rgb(27, 41, 27);
+    border-radius: 5px;
+    width: 70px;
+    height: 65;
+}
+.aside{
+    background-color: rgb(126, 122, 107);
+    min-height: 400px;
     border-radius: 12px;
-    background: #242C1A;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    padding: 12px 20px;
+    width: 65%;
 }
 #search{
-    position: absolute;
-    width: 493px;
-    height: 130px;
-    left: 40px;
-    top: 118px;
-    background: #FFFFFF;
+    background-color: rgb(156, 153, 153);
+    width: 95%;
+    border-radius: 10px;
+    border: solid 2px rgb(95, 94, 94);
+    margin-left: 20px;
 }
-#employeeName, #s_email, #s_phoneNumber, #s_position{
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 6px;
-    background: #C4C4C4;
+#search button, #search input{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-#employeeName{
-    left: 9px;
-}
-#s_email{
-    left: 119px;
-}
-#s_phoneNumber{
-    left: 229px
-}
-#s_position{
-    left: 339px;
-}
-#s_name{
-    position: absolute;
-    width: 355px;
-    height: 37px;
-    left: 9px;
-    top: 60px;
-    border-radius: 15px;
-    padding-left: 12px;
-    background: #C4C4C4;
-}
-#search button{
-    position: absolute;
-    width: 93px;
-    height: 38px;
-    left: 388px;
-    top: 59px;
-    color: white;
-    font-weight: bold;
+#search input{
     border-radius: 12px;
-    background: #242C1A;
+    padding-left: 10px;
+    height: 30px;
+    width: 75%;
+    font-size: 16px;
+    font-family: sans-serif;
 }
-
-.name, .email, .number, .position{
-    position: absolute;
-    top: 20px;
+table {
+  width:100%;
+  margin-top: 20px;
 }
-
-.name{
-    left: 9px;
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
 }
-
-.email{
-    left: 119px;
+th, td {
+  padding: 15px;
+  text-align: left;
+  text-transform: capitalize;
 }
-.number{
-    left: 229px;
+th {
+  background-color: black;
+  color: white;
 }
-.position{
-    left: 339px;
+tr:nth-child(even) {
+  background-color: #eee;
 }
-
-.addingRes{
-    position: absolute;
-    display: none;
-    width: 260px;
-    height: 60px;
-    left: 45px;
-    top: 310px;
-    color: rgb(3, 43, 3);
-    background: rgb(185, 235, 194);
-    padding: 20px 20px;
-    text-align: center;
-    border: solid 2px rgb(43, 53, 2);
+tr:nth-child(odd) {
+ background-color: #fff;
 }

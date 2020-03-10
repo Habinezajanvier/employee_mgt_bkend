@@ -9,7 +9,7 @@ let myMonth = document.getElementById("month");
 let year = document.getElementById('year');
 
 let addingForm = document.querySelector('.adding');
-let addingRes = document.querySelector('.addingRes');
+let addingRes = document.querySelector('.employees');
 
 //options for user to select on dates
 const monthOptions = `
@@ -36,7 +36,8 @@ window.onload = () =>{
     if(!myToken){
         window.location = './index.html';
     }
-    localStorage.clear('token');
+    //localStorage.clear('token');
+    
 }
 
 let displayOnAdding =(data)=> {
@@ -46,6 +47,7 @@ let displayOnAdding =(data)=> {
     email.value = "";
     year.value = "";
     myDate.value = "";
+    myMonth.value = "";
     position.value = "";
 
     addingForm.style.opacity = '0.2';
@@ -57,10 +59,19 @@ let displayOnAdding =(data)=> {
         addingForm.style.opacity = '1';
     }, 10000);
 }
+//DataData validation
+let validateData =(phone, name)=>{
+   let reg = /[a-z]/;
+   let numberCheckk = phone.match(reg);
+   if(numberCheckk){
+       console.log(numberCheckk);
+   } 
+}
 
 
 addingForm.onsubmit = (e) =>{
     e.preventDefault();
+    console.log(parseInt(phoneNumber.value));
 
     fetch('https://em-management.herokuapp.com/company/employees', {
         method: "POST",
@@ -71,7 +82,7 @@ addingForm.onsubmit = (e) =>{
         },
         body: JSON.stringify({
             employeeName: employeeName.value,
-            idNumber: idNumber.value,
+            idNumber: idNumber.value.toString(),
             phoneNumber: phoneNumber.value,
             email: email.value,
             year: year.value.toString(),

@@ -1,92 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>commpany X</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Company X</h1>
+      <div class="logo">
+        <img src="../image/companyx.png" alt="no Image found" />
+      </div>
+      <h1>Employee Management</h1>
+      <div class="menu">
+        <div id="login"><a href="./login.html">Login</a></div>
+        <div id="signup"><a href="./signup.html">SignUp</a></div>
+      </div>
     </header>
     <div class="container">
-        <div class="content">
-            <div class="upper">
-                <h2>Employee management</h2>
-                This application is designed to manage our employees, 
-                to access all the information about employees, requiers to be a manager
-            </div>
-            <div class="cnt-down">
-                If you are a new manager your have to register first so click on register button 
-                If you are not new login to continue
-            </div>
-            <button class="register">Register</button>
-            <button class="loginbtn">Login</button>
+      <div class="content">
+        <h2>Digitalized Management</h2>
+        <div class="inner">
+          <div class="upper">
+            <p>
+              <span class="commpany">As the Company,</span> <br />To enhance
+              digitalized world and help our managers to work interactively and
+              manages other employees so easily, we come up with the app which
+              help them to accomplish this work. <br />
+              <span class="asks">Don't ask yourself hows</span><br />
+              As a manager you may access all the informations about the
+              employees, As a manager you have to enroll all new employees on
+              the their first day, As a manager yourself, you will know all the
+              roles given to the employees, Also you should edit, delete or fire
+              some employees
+            </p>
+          </div>
+          <div class="cnt-down">
+            If you are a new manager you have to register first, so click on
+            register button. If you are not new, login to continue
+          </div>
         </div>
-        <div class="aside">
-            <div  class="signUp">
-                <h2>Sign Up</h2>
-                <div class="para">
-                    <p>For new manager, fill out this information below to access our management system  
-                        over employeers
-                    </p>
-                </div>
-                <form class="signUp_form" autocomplete="off">
-                    <p class="name">Employee Name</p>
-                    <input type="text" id="name" required>
-                    <p class="num">Id Number</p>
-                    <input type="text" id="number" required>
-                    <p class="email">Email</p>
-                    <input type="email" name="email" id="email" required>
-                    <p class="password">Password</p>
-                    <input type="password" name="password" required id="password">
-                    <p class="position">Position</p>
-                    <input type="text" name="position" requird id="position">
-                    <p class="birthdate">Date of birth</p>
-                    <input type="text" name="birthdate" required id="birthdate">
-    
-                    <button type="submit">Sign Up</button>
-                </form>
-                
-            </div>
-            <div  class="login">
-                <h2>Login</h2>
-                <div class="para">
-                    <p>As manager login to access our management system over 
-                        employeers
-                    </p>
-                </div>
-                <form class="login_form" autocomplete="off">
-                    <p class="l_name">Employee Name</p>
-                    <input type="text" id="l_name" required>
-                    
-                    <p class="l_password">Password</p>
-                    <input type="password" name="password" required id="l_password">
-                    
-    
-                    <button type="submit">Login</button>
-                </form>
-                
-            </div>
-            <div class="error"></div>
+        <div class="btns">
+          <button class="register">Register</button>
+          <button class="loginbtn">Login</button>
+        </div>
+      </div>
+      <div class="aside">
+        <div class="centered">
+          <div class="innerlogin">
+            <h3>Login</h3>
+            <form id="lgn" autocomplete="off">
+              <label for="username">
+                Username
+                <input type="text" id="username" name="username" required />
+              </label>
+              <label for="password">
+                Password
+                <input type="password" id="password" name="password" required />
+              </label>
+              <button type="submit">Login</button>
+            </form>
+          </div>
         </div>
 
+        <div class="error"></div></div>
+      </div>
     </div>
-    
+
     <footer>
-        <div class="location">
-            <h3>Location</h3>
-        </div>
-        <div class="contact">
-            <h3>Contact</h3>
-        </div>
-        <div class="about">
-            <h3>About us</h3>
-        </div>
+      <div class="location">
+        <h3>Location</h3>
+      </div>
+      <div class="contact">
+        <h3>Contact</h3>
+      </div>
+      <div class="about">
+        <h3>About us</h3>
+      </div>
     </footer>
     <script src="../scripts/index.js"></script>
-    <script src="../scripts/login.js"></script>
-    <script src="../scripts/signup.js"></script>
-</body>
+  </body>
 </html>
