@@ -6,7 +6,7 @@ div, form{
 }
 .container{
     position: relative;
-    width: 80%;
+    width: 1020px;
     height: 600px;
     background: #FFFFFF; 
 }
@@ -22,7 +22,7 @@ div, form{
 .adding{
     position: absolute;
     width: 300px;
-    height: 369px;
+    height: 390px;
     left: 45px;
     top: 200px;
 
@@ -31,7 +31,7 @@ div, form{
 .aside{
     position: absolute;
     width: 600px;    
-    height: 374px;
+    height: 390px;
     left: 365px;
     top: 200px;
     
@@ -90,29 +90,43 @@ h2{
     padding-left: 10px;
 }
 #name{
-    top: 60px;
+    top: 50px;
 }
 #number{
-    top: 100px;
+    top: 90px;
 }
 #email{
-    top: 140px;
+    top: 130px;
 }
 #position{
-    top: 180px
+    top: 170px
 }
 #phoneNumber{
-    top: 220px
+    top: 210px
 }
-#birthDate{
-    top: 260px
+#dates{
+    top: 255px;
+    width: 100px;
+}
+#month{
+    position: absolute;
+    top: 255px;
+    left: 150px;
+    width: 120px;
+    border-radius: 12px;
+    padding-left: 10px;
+    height: 25px;
+    border: 2px solid gray;
+}
+#year{
+    top: 285px;
 }
 .adding button{
     position: absolute;
     width: 90px;
     height: 34px;
     left: 95px;
-    top: 319px;
+    top: 330px;
     color: white;
     font-weight: bold;
     border-radius: 12px;
@@ -165,4 +179,37 @@ h2{
     font-weight: bold;
     border-radius: 12px;
     background: #242C1A;
+}
+
+.name, .email, .number, .position{
+    position: absolute;
+    top: 20px;
+}
+
+.name{
+    left: 9px;
+}
+
+.email{
+    left: 119px;
+}
+.number{
+    left: 229px;
+}
+.position{
+    left: 339px;
+}
+
+.addingRes{
+    position: absolute;
+    display: none;
+    width: 260px;
+    height: 60px;
+    left: 45px;
+    top: 310px;
+    color: rgb(3, 43, 3);
+    background: rgb(185, 235, 194);
+    padding: 20px 20px;
+    text-align: center;
+    border: solid 2px rgb(43, 53, 2);
 }

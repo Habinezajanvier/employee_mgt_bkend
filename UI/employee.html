@@ -20,29 +20,38 @@
         <form class="adding" autocomplete="off">
             <h2>Add Employee</h2>
             <input type="text" name="name" id="name" placeholder="Employee Name" required>
-            <input type="text" name="name" id="number" placeholder="id Number" required>
+            <input type="text" name="name" id="number" placeholder="id Number" required maxlength="16" minlength="16">
             <input type="text" name="name" id="email" placeholder="Email" required>
             <input type="text" name="name" id="position" placeholder="Postion" required>
             <input type="text" name="name" id="phoneNumber" placeholder="Phone Number" required>
-            <input type="text" name="name" id="birthDate" placeholder="Date of birth" required>
+            <input name="date" id="dates" placeholder="Day of birth" type="number" min="01" max="31" maxlength="2" step="1">
+            <select name="month" id="month"></select>
+            <input name="year" id="year" placeholder="year of birth" type="number" min="1900" max="2000" maxlength="4" step="1" required>
             <button type="submit">Save</button>
         </form>
+        <div class="addingRes"></div>
         <div class="aside">
             <div class="para">
                 <p>
                     Search for employee you want, you can use either position of the employee, employee name, email or phone number of employee
                 </p>
                 <form id='search' autocomplete="off">
+                    <p class="name">Name</p>
                     <input type="radio" name="field" id="employeeName" value="name">
+                    <p class="email">Email</p>
                     <input type="radio" name="field" id="s_email" value="Email">
+                    <p class="number">Phone</p>
                     <input type="radio" name="field" id="s_phoneNumber" value="Number">
+                    <p class="position">Position</p>
                     <input type="radio" name="field" id="s_position" value="Position">
                     <input type="text" id="s_name">
                     <button type="submit">Search</button>
                 </form>
             </div>
         </div>
+        <div class="searchRes"></div>
     </div>
     <footer></footer>
+    <script src="../scripts/employee.adding.js"></script>
 </body>
 </html>
