@@ -36,6 +36,7 @@ window.onload = () =>{
     if(!myToken){
         window.location = './index.html';
     }
+    localStorage.clear('token');
 }
 
 let displayOnAdding =(data)=> {
