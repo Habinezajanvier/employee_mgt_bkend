@@ -4,8 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>company X</title>
+    <link rel="stylesheet" href="../styles/signup.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <h1>Sign up</h1>
+    <header>
+      <div class="logo">
+        <img src="../image/companyx.png" alt="Logo" />
+      </div>
+      <div class="heads">
+        <h1>Employee Management</h1>
+      </div>
+    </header>
+    <main class="signup">
+      <div class="content">
+        <div class="headings">
+          <h2>Create Management Account</h2>
+        </div>
+        <div class="container">
+          <form autocomplete="off" id="signup">
+            <div class="wrapper">
+              <div class="left">
+                <label for="name"
+                  >Employee Name
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    autocapitalize="on"
+                  />
+                </label>
+                <label for="number"
+                  >ID Number
+                  <input type="number" name="number" id="number" />
+                </label>
+                <label for="birthdate"
+                  >Birth Date
+                  <input
+                    type="text"
+                    name="birthdate"
+                    id="birthdate"
+                    autocapitalize="off"
+                  />
+                </label>
+              </div>
+              <div class="right">
+                <label for="email"
+                  >Email
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autocapitalize="off"
+                  />
+                </label>
+                <label for="position"
+                  >Position
+                  <input
+                    type="text"
+                    name="position"
+                    id="position"
+                    autocapitalize="on"
+                  />
+                </label>
+                <label for="password"
+                  >Password
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    autocapitalize="off"
+                  />
+                </label>
+              </div>
+            </div>
+            <div class="below">
+              <a href="./index.html"><span>Back</span></a>
+              <button id="submit">Login</button>
+              <div class="load"></div>
+            </div>
+            <div class="error"></div>
+          </form>
+          <div class="aside">
+            <p>
+              As new manager, You have to create an account on the employee
+              management system so that on single log in you will have access in
+              our employee database
+            </p>
+            <p>
+              As a manager you will get access to employee enrolment, employee
+              editing as well as other information related to all of our
+              employee
+            </p>
+          </div>
+        </div>
+        <div class="last">
+          <p>Or <a href="./login.html">Login</a> If you have account</p>
+        </div>
+      </div>
+    </main>
+    <script src="../scripts/signup.js"></script>
   </body>
 </html>

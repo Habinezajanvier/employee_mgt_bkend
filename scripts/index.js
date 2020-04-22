@@ -1,19 +1,19 @@
-let inner = document.querySelector ('.innerlogin');
-let loginbtn = document.querySelector ('.loginbtn');
-let register = document.querySelector ('.register');
-let innerForm = document.getElementById ('lgn');
-let error = document.querySelector ('.error');
+let inner = document.querySelector('.innerlogin');
+let loginbtn = document.querySelector('.loginbtn');
+let register = document.querySelector('.register');
+let innerForm = document.getElementById('lgn');
+let error = document.querySelector('.error');
 
-const username = document.getElementById ('username');
-const password = document.getElementById ('password');
+const username = document.getElementById('username');
+const password = document.getElementById('password');
 
 //if someone clicked outside of the form but not on login button
-document.onclick = e => {
-  if (e.target.closest ('.loginbtn')) {
+document.onclick = (e) => {
+  if (e.target.closest('.loginbtn')) {
     inner.style.display = 'inherit';
     inner.style.animation = 'popup 0.5s linear alternate';
   } else {
-    if (e.target.closest ('.innerlogin')) {
+    if (e.target.closest('.innerlogin')) {
       inner.style.display = 'inherit';
     } else {
       inner.style.display = 'none';
@@ -21,7 +21,7 @@ document.onclick = e => {
   }
 };
 
-register.addEventListener ('click', () => {
+register.addEventListener('click', () => {
   window.location = './signup.html';
 });
 
@@ -32,14 +32,14 @@ register.addEventListener ('click', () => {
 const validate = (username, password) => {
   const emailFormat = /^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/;
 
-  if (!emailFormat.test (username)) {
+  if (!emailFormat.test(username)) {
     error.innerHTML = 'Your username is not valid';
-    document.getElementById ('username').value = '';
+    document.getElementById('username').value = '';
     return false;
   }
   if (password.length < 4) {
     error.innerHTML = 'Password must be at least 4 character long';
-    document.getElementById ('password').value = '';
+    document.getElementById('password').value = '';
     return false;
   } else {
     /**
@@ -49,29 +49,29 @@ const validate = (username, password) => {
     /**
      * End of the our loader -- start of the function that have to consume login API
      */
-    fetch ('https://em-management.herokuapp.com/company/login', {
+    fetch('https://em-management.herokuapp.com/company/login', {
       method: 'POST',
       headers: {
         accept: 'application/json, texp/plain',
         'content-Type': 'application/json',
       },
-      body: JSON.stringify ({
-        employeeName: username,
+      body: JSON.stringify({
+        email: username,
         password: password,
       }),
     })
-      .then (res => res.json ())
-      .then (data => {
+      .then((res) => res.json())
+      .then((data) => {
         if (data.token) {
-          localStorage.setItem ('token', data.token);
+          localStorage.setItem('token', data.token);
           window.location = './employee.html';
         } else {
           error.innerHTML = data.msg;
-          document.getElementById ('username').value = '';
-          document.getElementById ('password').value = '';
+          document.getElementById('username').value = '';
+          document.getElementById('password').value = '';
         }
       })
-      .catch (err => {
+      .catch((err) => {
         error.innerHTML = 'Failed to Login, Try Again';
       });
   }
@@ -80,7 +80,7 @@ const validate = (username, password) => {
 /**
  * Once the form is submitted validate function must be called
  */
-innerForm.onsubmit = e => {
-  e.preventDefault ();
-  validate (username.value, password.value);
+innerForm.onsubmit = (e) => {
+  e.preventDefault();
+  validate(username.value, password.value);
 };

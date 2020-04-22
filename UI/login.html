@@ -4,8 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>company X</title>
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <h1>Login</h1>
+    <header>
+      <div class="logo">
+        <img src="../image/companyx.png" alt="Logo" />
+      </div>
+      <div class="heads">
+        <h1>Employee Management</h1>
+        <p><a href="./index.html">Back</a></p>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <div class="headings">
+          <h2>Login</h2>
+        </div>
+        <form autocomplete="off" id="login">
+          <input type="text" id="username" placeholder="Email" required />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button id="submit">Login</button>
+          <div class="load"></div>
+        </form>
+        <div class="last">
+          <p>Or <a href="./signup.html">Create account</a> If you are new</p>
+        </div>
+      </div>
+    </main>
+    <script src="../scripts/login.js"></script>
   </body>
 </html>

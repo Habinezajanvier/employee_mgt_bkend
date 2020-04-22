@@ -1,0 +1,214 @@
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: SourceSansPro-Regular;
+  src: url('../fonts/source-sans-pro/SourceSansPro-Regular.ttf');
+}
+
+@font-face {
+  font-family: SourceSansPro-Bold;
+  src: url('../fonts/source-sans-pro/SourceSansPro-Bold.ttf');
+}
+
+@font-face {
+  font-family: SourceSansPro-SemiBold;
+  src: url('../fonts/source-sans-pro/SourceSansPro-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: JosefinSans-Bold;
+  src: url('../fonts/JosefinSans/JosefinSans-Bold.ttf');
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+
+/*----------------------------------------------------*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('../image/bg-01.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+input::-webkit-input-placeholder {
+  color: #4b2354;
+  font-family: JosefinSans-Bold;
+  font-size: 16px;
+}
+input:-moz-placeholder {
+  color: #4b2354;
+  font-family: JosefinSans-Bold;
+  font-size: 16px;
+}
+input::-moz-placeholder {
+  color: #4b2354;
+  font-family: JosefinSans-Bold;
+  font-size: 16px;
+}
+input:-ms-input-placeholder {
+  color: #4b2354;
+  font-family: JosefinSans-Bold;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: rgb(3, 146, 10);
+}
+a:visited,
+a:active {
+  text-decoration: none;
+  color: rgb(3, 252, 15);
+}
+a:hover {
+  text-decoration: underline;
+}
+/*-------------------------------------------------------*/
+/*-------------------------------------------------------*/
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  background-color: rgb(55, 55, 55);
+  color: rgb(174, 153, 12);
+  font-family: SourceSansPro-Bold;
+}
+.heads {
+  justify-content: space-around;
+  width: 30%;
+}
+main {
+  font-family: SourceSansPro-Regular;
+  margin-top: 100px;
+  background: rgba(93, 84, 240, 0.5);
+  background: -webkit-linear-gradient(
+    left,
+    rgba(3, 252, 15, 0.5),
+    rgba(174, 153, 12, 0.5)
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(3, 252, 15, 0.5),
+    rgba(174, 153, 12, 0.5)
+  );
+  background: -moz-linear-gradient(
+    left,
+    rgba(3, 252, 15, 0.5),
+    rgba(174, 153, 12, 0.5)
+  );
+  background: linear-gradient(
+    left,
+    rgba(3, 252, 15, 0.5),
+    rgba(174, 153, 12, 0.5)
+  );
+  display: flex;
+  justify-content: space-around;
+}
+.content {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  text-align: center;
+  background-color: rgba(55, 55, 55, 0.8);
+  color: rgb(174, 153, 12);
+  min-height: 500px;
+  border-radius: 15px;
+  justify-content: space-around;
+}
+.headings {
+  font-family: SourceSansPro-SemiBold;
+}
+#login {
+  width: 100%;
+  margin-top: 20px;
+}
+input,
+button {
+  border-radius: 20px;
+  padding: 20px;
+  outline: none;
+  border: none;
+}
+input {
+  width: 80%;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 50px;
+  color: #4b2354;
+  font-family: JosefinSans-Bold;
+  font-size: 16px;
+
+  box-shadow: 0 3px 20px 0px rgba(174, 153, 12, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(174, 153, 12, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(174, 153, 12, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(174, 153, 12, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(174, 153, 12, 0.1);
+}
+button {
+  width: 30%;
+  font-family: SourceSansPro-SemiBold;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgba(250, 226, 71, 0.5);
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+button:hover {
+  background-color: rgba(223, 194, 7, 0.7);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 18px;
+}
+
+/*-----------------------------------------------------------*/
+.load {
+  padding: 10px 0;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  color: rgb(174, 44, 12);
+}
+.loader {
+  border: 5px solid #9c9c7b;
+  border-radius: 50%;
+  border-top: 5px solid rgb(85, 77, 27);
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.last {
+  line-height: 40px;
+}
