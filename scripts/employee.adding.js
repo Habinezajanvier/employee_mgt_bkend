@@ -1,98 +1,140 @@
-let employeeName = document.getElementById('name');
-let idNumber = document.getElementById('number');
-let email = document.getElementById('email');
-let position = document.getElementById('position');
-let phoneNumber = document.getElementById('phoneNumber');
+let emName = document.getElementById("name");
+let emIdNumber = document.getElementById("id-number");
+let emEmail = document.getElementById("email");
+let emPosition = document.getElementById("position");
+let emPhoneNumber = document.getElementById("phone-number");
+let emBirthDate = document.getElementById("birth-date");
 
-let myDate = document.getElementById('dates');
-let myMonth = document.getElementById("month");
-let year = document.getElementById('year');
+let employeeAddingForm = document.getElementById("employee-adding");
 
-let addingForm = document.querySelector('.adding');
-let addingRes = document.querySelector('.employees');
+let error = document.querySelector(".error");
+let load = document.querySelector(".load");
 
-//options for user to select on dates
-const monthOptions = `
-<option value = ''>please Select</option>
-<option value = '01'>Jan</option>
-<option value = '02'>Feb</option>
-<option value = '03'>March</option>
-<option value = '04'>App</option>
-<option value = '05'>May</option>
-<option value = '06'>Jun</option>
-<option value = '07'>Jul</option>
-<option value = '08'>Aug</option>
-<option value = '09'>Sept</option>
-<option value = '10'>Oct</option>
-<option value = '11'>Nov</option>
-<option value = '12'>Dec</option>
-`
+const url = "https://em-management.herokuapp.com";
+const myToken = localStorage.getItem("token");
 
-myMonth.innerHTML = monthOptions;
+const inputReturn = () => {
+  emName.value = "";
+  emIdNumber.value = "";
+  emEmail.value = "";
+  emPosition.value = "";
+  emPhoneNumber.value = "";
+  emBirthDate.value = "";
+  error.innerHTML = "";
+};
 
-const myToken = localStorage.getItem('token');
-
-window.onload = () =>{
-    if(!myToken){
-        window.location = './index.html';
-    }
-    //localStorage.clear('token');
-    
-}
-
-let displayOnAdding =(data)=> {
-    employeeName.value = "";
-    idNumber.value = "";
-    phoneNumber.value = "";
-    email.value = "";
-    year.value = "";
-    myDate.value = "";
-    myMonth.value = "";
-    position.value = "";
-
-    addingForm.style.opacity = '0.2';
-    addingRes.innerText = data.msg;
-    addingRes.style.display = 'inherit'
-
-    setTimeout(() => {
-        addingRes.style.display = 'none';
-        addingForm.style.opacity = '1';
-    }, 10000);
-}
-//DataData validation
-let validateData =(phone, name)=>{
-   let reg = /[a-z]/;
-   let numberCheckk = phone.match(reg);
-   if(numberCheckk){
-       console.log(numberCheckk);
-   } 
-}
-
-
-addingForm.onsubmit = (e) =>{
-    e.preventDefault();
-    console.log(parseInt(phoneNumber.value));
-
-    fetch('https://em-management.herokuapp.com/company/employees', {
-        method: "POST",
-        headers: {
-            "accept": "application/json",
-            "content-type": "application/json",
-            "Authentication": myToken,
-        },
-        body: JSON.stringify({
-            employeeName: employeeName.value,
-            idNumber: idNumber.value.toString(),
-            phoneNumber: phoneNumber.value,
-            email: email.value,
-            year: year.value.toString(),
-            date: myDate.value.toString(),
-            month: myMonth.value.toString(),
-            position: position.value
-        })
+/**
+ * Function to consume add employee API
+ */
+const submit = (data) => {
+  /**
+   * Loading while waiting for the response
+   */
+  load.innerHTML = `<div class="loader"></div>`;
+  /**
+   * ******************************************
+   * ******************************************
+   */
+  fetch(`${url}/company/employees`, {
+    method: "POST",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      Authentication: myToken,
+    },
+    body: JSON.stringify(data),
+  })
+    .then((res) => res.json())
+    .then((myJson) => {
+      if (myJson.error) {
+        load.innerHTML = "";
+        error.style.color = "rgb(174, 44, 12)";
+        error.innerHTML = `${myJson.error}`;
+      } else {
+        load.innerHTML = "";
+        error.style.color = "rgb(3, 252, 15)";
+        error.innerHTML = `${myJson.msg}`;
+        setTimeout(() => {
+          inputReturn();
+        }, 4000);
+      }
     })
-    .then(res => res.json())
-    .then((data)=> {
-        displayOnAdding(data);
+    .catch((err) => {
+      error.style.color = "rgb(174, 44, 12)";
+      error.innerHTML = "Something went wrong, try again";
     });
-}
+};
+
+/**
+ * Validating inputs before being sent to server
+ * if(!validData) return false; else(submit data)
+ */
+
+const verify = (name, idNumber, phoneNumber, email, date, position, obj) => {
+  const nameFormat = /^[a-z ,.'-]+$/i;
+  const emailFormat = /^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/;
+  const dateFormat = /^([0-2][1-9]|[1-3][0-1])(\/)(((0)[1-9])|((1)[0-2]))(\/)\d{4}$/i;
+  const phoneFormat = /^\+2507/;
+
+  if (!nameFormat.test(name)) {
+    error.style.color = "rgb(174, 44, 12)";
+    error.innerHTML = "Name is not valid";
+    return false;
+  }
+  if (idNumber.length != 16) {
+    error.style.color = "rgb(174, 44, 12)";
+    error.innerHTML = "ID Number must be a Rwandan ID";
+    return false;
+  }
+  if (!phoneFormat.test(phoneNumber) && phoneNumber.length < 13) {
+    error.style.color = "rgb(174, 44, 12)";
+    error.innerHTML = "Phone number must be of format [+2507...]";
+    return false;
+  }
+  if (!emailFormat.test(email)) {
+    error.style.color = "rgb(174, 44, 12)";
+    error.innerHTML = "Email should look like test@gmail.com";
+    return false;
+  }
+  if (!nameFormat.test(position)) {
+    error.style.color = "rgb(174, 44, 12)";
+    error.innerHTML = position;
+    return false;
+  }
+  if (!dateFormat.test(date)) {
+    error.style.color = "rgb(174, 44, 12)";
+    error.innerHTML = "Use DD/MM/YYYY format as birth date";
+    return false;
+  } else {
+    submit(obj);
+  }
+};
+
+employeeAddingForm.onsubmit = (e) => {
+  e.preventDefault();
+  const employeeName = emName.value;
+  const idNumber = emIdNumber.value;
+  const email = emEmail.value;
+  const phoneNumber = emPhoneNumber.value;
+  const position = emPosition.value;
+  const birthDate = emBirthDate.value;
+
+  const options = {
+    employeeName,
+    idNumber,
+    phoneNumber,
+    email,
+    position,
+    birthDate,
+  };
+
+  verify(
+    employeeName,
+    idNumber,
+    phoneNumber,
+    email,
+    birthDate,
+    position,
+    options
+  );
+};

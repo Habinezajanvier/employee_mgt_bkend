@@ -7,6 +7,8 @@ let error = document.querySelector('.error');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 
+const url = 'https://em-management.herokuapp.com';
+
 //if someone clicked outside of the form but not on login button
 document.onclick = (e) => {
   if (e.target.closest('.loginbtn')) {
@@ -23,6 +25,12 @@ document.onclick = (e) => {
 
 register.addEventListener('click', () => {
   window.location = './signup.html';
+});
+
+loginbtn.addEventListener('click', () => {
+  if (window.innerWidth <= 760) {
+    window.location = './login.html';
+  }
 });
 
 /**
@@ -49,7 +57,7 @@ const validate = (username, password) => {
     /**
      * End of the our loader -- start of the function that have to consume login API
      */
-    fetch('https://em-management.herokuapp.com/company/login', {
+    fetch(`${url}/company/login`, {
       method: 'POST',
       headers: {
         accept: 'application/json, texp/plain',

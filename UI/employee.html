@@ -1,58 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>company X</title>
-    <link rel="stylesheet" href="../styles/employee.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/employee.css" />
+    <link
+      rel="shortcut icon"
+      href="../image/favicon.ico.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Company X</h1>
+      <div class="logo">
+        <img src="../image/companyx.png" alt="no Image found" />
+      </div>
+      <div class="menu">
+        <div class="employee-all">
+          <div id="all">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="users"
+              class="svg-inline--fa fa-users fa-w-20"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+            >
+              <path
+                fill="currentColor"
+                d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"
+              ></path>
+            </svg>
+          </div>
+          <p id="all-employee">Employees</p>
+        </div>
+        <div class="employee-add">
+          <div id="add">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="user-plus"
+              class="svg-inline--fa fa-user-plus fa-w-20"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+            >
+              <path
+                fill="currentColor"
+                d="M624 208h-64v-64c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v64h-64c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h64v64c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-64h64c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm-400 48c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+              ></path>
+            </svg>
+          </div>
+          <p id="add-employee">Add</p>
+        </div>
+        <div class="employee-search">
+          <div id="search">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="search"
+              class="svg-inline--fa fa-search fa-w-16"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="currentColor"
+                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+              ></path>
+            </svg>
+          </div>
+          <p id="search-employee">Search</p>
+        </div>
+        <div class="account">
+          <div id="profile">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="user"
+              class="svg-inline--fa fa-user fa-w-14"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="currentColor"
+                d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+              ></path>
+            </svg>
+          </div>
+          <p id="account-name"></p>
+          <div class="account-data">
+            <div id="my-data"></div>
+            <div id="log-out">Log Out</div>
+          </div>
+        </div>
+      </div>
     </header>
-    <div class="container">
-        <div class="upper">
-            <h2>Employee Management</h2>
-            <div class="para">
-                <p>
-                    This application is designed for our managers to control and access every information about our employers,
-                    As manager you should add new employee, to access data for employee use search box, and if you want to edit 
-                    anything about her/him
-                </p>
+    <main>
+      <section class="intro">
+        <div class="container">
+          <div class="heads"><h2>Welcome Manager</h2></div>
+          <div class="wraper">
+            <div class="content">
+              <span>Manager</span>
+              <p>
+                We are happy that you are Here, As a manager you have access on
+                all employees information and activities, You have to enroll new
+                employee, and monitor all the progress of them, If any employee
+                is not working well, you can disactivate him/her and a warning
+                be sent to him immediately, Also if any is not in good line as
+                our vision, can be fired using this platform and for instance
+                you can delete him
+              </p>
+              <div class="em-some">
+                <div class="first"></div>
+                <div class="second"></div>
+                <div class="third"></div>
+              </div>
+              <span>Happy Work</span>
             </div>
+            <div class="aside"></div>
+          </div>
         </div>
-    
-        <div class="aside">
-            <h2>Employees</h2>
-            <div class="para">
-                <p>
-                    Search for employee you want, you can use either position of the employee, employee name, email or phone number of employee
-                </p>
-                <form id='search' autocomplete="off">
-                    <input type="text" id="s_name">
-                    <button type="submit">Search</button>
-                </form>
-            </div>
-            <div class="employees">
-
-            </div>
+      </section>
+      <section class="tables">
+        <div id="closing"><span id="closing-btn">X</span></div>
+        <div class="table-head">
+          <h2>All Employees</h2>
         </div>
-
-        <form class="adding" autocomplete="off">
-            <h2>Add Employee</h2>
-            <input type="text" name="name" id="name" placeholder="Employee  Full Name" required>
-            <input type="number" name="name" id="number" placeholder=" national id Number" required >
-            <input type="email" name="name" id="email" placeholder="Email" required>
-            <input type="text" name="name" id="position" placeholder="Postion (Manager, dev, designer,)" required>
-            <input type="text" name="name" id="phoneNumber" placeholder="Phone Number (+250___)"  required>
-            <input name="date" id="dates" placeholder="Day of birth" type="number" min="01" max="31"  step="1">
-            <select name="month" id="month"></select>
-            <input name="year" id="year" placeholder="year of birth" type="number" min="1900" max="2000"  step="1" required>
-            <button type="submit">Save</button>
-        </form>
-    </div>
-    <footer></footer>
+        <div class="employee-table"></div>
+      </section>
+      <section class="adding">
+        <div id="closing"><span id="closing-btn">X</span></div>
+        <div class="adding-head">
+          <h2>Add Employee Informations</h2>
+        </div>
+        <div class="adding-frm">
+          <form autocomplete="off" id="employee-adding">
+            <div class="left">
+              <input
+                type="text"
+                id="name"
+                placeholder="Employee Name"
+                autocapitalize="on"
+              />
+              <input type="number" id="id-number" placeholder="ID number" />
+              <input
+                type="tel"
+                id="phone-number"
+                placeholder="Phone Number, +250..."
+              />
+            </div>
+            <div class="middle">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                autocapitalize="off"
+              />
+              <input
+                type="text"
+                name="birthDate"
+                id="birth-date"
+                placeholder="Birht Date"
+              />
+              <input
+                type="text"
+                name="position"
+                id="position"
+                placeholder="Position"
+                autocapitalize="on"
+              />
+            </div>
+            <div class="right">
+              <div class="error"></div>
+              <button type="submit">Add</button>
+              <div class="load"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="search">
+        <div id="closing"><span id="closing-btn">X</span></div>
+        <div class="searching-head">
+          <h2>Search</h2>
+          <div class="searching-frm">
+            <form autocomplete="off" id="em-srch-form">
+              <input
+                type="text"
+                name="searching"
+                id="searching"
+                placeholder="Search for Employee"
+              />
+              <button type="submit">Enter</button>
+              <div class="load"></div>
+            </form>
+          </div>
+        </div>
+        <div class="searching-res"></div>
+      </section>
+    </main>
+    <footer>
+      <div class="location">
+        <h3>Location</h3>
+      </div>
+      <div class="contact">
+        <h3>Contact</h3>
+      </div>
+      <div class="about">
+        <h3>About us</h3>
+      </div>
+    </footer>
+    <script src="../scripts/manager.js"></script>
+    <script src="../scripts/employee.js"></script>
     <script src="../scripts/employee.adding.js"></script>
-    <script src="../scripts/employees.js"></script>
-</body>
+    <script src="../scripts/employee.search.js"></script>
+  </body>
 </html>

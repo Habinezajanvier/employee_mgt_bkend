@@ -3,6 +3,8 @@ let username = document.getElementById ('username');
 let password = document.getElementById ('password');
 let error = document.querySelector ('.load');
 
+const url = 'https://em-management.herokuapp.com';
+
 /**
  * Verifying if user submitted valid data
  */
@@ -24,7 +26,7 @@ const verify = (username, password) => {
     /**
      * End of the our loader -- start of the function that have to consume login API
      */
-    fetch ('https://em-management.herokuapp.com/company/login', {
+    fetch (`${url}/company/login`, {
       method: 'POST',
       headers: {
         accept: 'application/json, texp/plain',

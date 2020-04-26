@@ -80,6 +80,7 @@ header {
   background-color: rgb(55, 55, 55);
   color: rgb(174, 153, 12);
   font-family: SourceSansPro-Bold;
+  align-items: center;
 }
 .heads {
   justify-content: space-around;
@@ -211,4 +212,19 @@ button:hover {
 }
 .last {
   line-height: 40px;
+}
+
+@media (max-width: 760px) {
+  h1 {
+    font-size: 16pt;
+  }
+  .content {
+    width: 80%;
+  }
+  input,
+  button {
+    width: 85%;
+    border-radius: 5px;
+    padding: 5px;
+  }
 }

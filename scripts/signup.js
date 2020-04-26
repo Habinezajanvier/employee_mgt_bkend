@@ -9,19 +9,21 @@ let load = document.querySelector ('.load');
 let error = document.querySelector ('.error');
 let form = document.getElementById ('signup');
 
+const url = 'https://em-management.herokuapp.com';
+
 /**
  * This is fetch function to consume register API
  */
 const submit = data => {
   /**
-     * Loading while waiting for the response
-     */
+   * Loading while waiting for the response
+   */
   load.innerHTML = `<div class="loader"></div>`;
   /**
    * ******************************************
    * ******************************************
    */
-  fetch ('https://em-management.herokuapp.com/company/register', {
+  fetch (`${url}/company/register`, {
     method: 'POST',
     headers: {
       accept: 'application/json, texp/plain',
@@ -45,6 +47,7 @@ const submit = data => {
       }
     })
     .catch (err => {
+      console.log (err);
       load.innerHTML = '';
       error.style.color = 'rgb(174, 44, 12)';
       error.innerHTML = `Something went wrong, Try again`;
@@ -92,8 +95,8 @@ const verify = (name, number, email, password, position, date, obj) => {
     return false;
   } else {
     /**
-       * Function to consume register API
-       */
+     * Function to consume register API
+     */
     submit (obj);
   }
 };
